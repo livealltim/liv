@@ -1,0 +1,184 @@
+General Styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #1cacf4;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative; /* So menu can overlap */
+}
+
+.logo-img {
+  height: 40px;
+}
+
+/* .menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+} */
+footer{
+  background-color: #0aaad6;
+}
+/* Sidebar Menu (Right-Aligned with Fixed Width) */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially hidden on the right */
+  width: 250px; /* Set to fixed width */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+  transition: right 0.3s;
+  z-index: 1000; /* Makes sure the menu appears on top */
+  box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  display: block;
+}
+
+.menu ul li a:hover {
+  background-color: #444;
+}
+
+/* Homepage */
+.homepage {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.image-item {
+  position: relative;
+  width: 45%;
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.image-item .image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.image-info .name,
+.image-info .age,
+.image-info .state {
+  margin: 5px 0;
+}
+
+.countdown {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #d9534f; /* Red color for special offer */
+}
+.audio-call {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+}
+.audio-call {
+  font-size: 50px;
+  cursor: pointer;
+  color: #0a81d6;
+}
+.video-call {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.video-call-icon {
+  font-size: 50px;
+  cursor: pointer;
+  color: #33d60a;
+}
+.homepage{
+  background-color: #d9534f;
+}
+#ii{
+  color: rgb(2, 40, 230);
+}
+.pp{
+  background-color: #62a451;
+}
+.p2{
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(13, 17, 4);
+}
+.pp1{
+  color: #1cacf4;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .image-gallery {
+    flex-direction: column;
+  }
+
+  .image-item {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .video-call {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .menu {
+    right: 0;
+  }
+
+  .menu ul li a {
+    text-align: center;
+  }
+  .homepage{
+    background-color: #d9534f;
+  }
+ #ii{
+    color: rgb(2, 40, 230);
+  }
+  .pp{
+    background-color: #62a451;
+  }
+  .p2{
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(13, 17, 4);
+  }
+}

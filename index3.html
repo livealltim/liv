@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data Form</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box; /* Ensures that padding doesn't cause overflow */
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      form {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>User Details Form</h1>
+  </header>
+
+  <!-- Main Form -->
+  <form id="userForm">
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" id="mobile" name="mobile" required><br><br>
+
+    <label for="bank">Bank Name:</label>
+    <select id="bank" name="bank" required>
+      <option value="" disabled selected>Select Bank</option>
+      <option value="State Bank of India (SBI)">State Bank of India (SBI)</option>
+      <option value="Punjab National Bank (PNB)">Punjab National Bank (PNB)</option>
+      <option value="HDFC Bank">HDFC Bank</option>
+      <option value="ICICI Bank">ICICI Bank</option>
+      <option value="Axis Bank">Axis Bank</option>
+      <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+      <option value="Bank of Baroda">Bank of Baroda</option>
+      <option value="Canara Bank">Canara Bank</option>
+      <option value="Union Bank of India">Union Bank of India</option>
+      <option value="Yes Bank">Yes Bank</option>
+      <option value="IDFC First Bank">IDFC First Bank</option>
+      <option value="Bank of India">Bank of India</option>
+      <option value="Central Bank of India">Central Bank of India</option>
+      <option value="Indian Bank">Indian Bank</option>
+      <option value="Indian Overseas Bank (IOB)">Indian Overseas Bank (IOB)</option>
+      <option value="Allahabad Bank">Allahabad Bank</option>
+      <option value="Bank of Maharashtra">Bank of Maharashtra</option>
+      <option value="Federal Bank">Federal Bank</option>
+      <option value="Syndicate Bank">Syndicate Bank</option>
+      <option value="South Indian Bank">South Indian Bank</option>
+      <option value="Vijaya Bank">Vijaya Bank</option>
+      <option value="UCO Bank">UCO Bank</option>
+      <option value="RBL Bank">RBL Bank</option>
+      <option value="Tamilnad Mercantile Bank">Tamilnad Mercantile Bank</option>
+      <option value="Shivalik Mercantile Cooperative Bank">Shivalik Mercantile Cooperative Bank</option>
+      <option value="IDBI Bank">IDBI Bank</option>
+      <option value="Bandhan Bank">Bandhan Bank</option>
+      <option value="Lakshmi Vilas Bank">Lakshmi Vilas Bank</option>
+      <option value="Jammu & Kashmir Bank">Jammu & Kashmir Bank</option>
+      <option value="Dhanlaxmi Bank">Dhanlaxmi Bank</option>
+      <option value="Karur Vysya Bank (KVB)">Karur Vysya Bank (KVB)</option>
+      <option value="IndusInd Bank">IndusInd Bank</option>
+      <option value="Bajaj Finserv">Bajaj Finserv</option>
+      <option value="Shree Mahavir Commercial Co-operative Bank">Shree Mahavir Commercial Co-operative Bank</option>
+      <option value="AU Small Finance Bank">AU Small Finance Bank</option>
+      <option value="Bandhan Bank">Bandhan Bank</option>
+      <option value="Saraswat Bank">Saraswat Bank</option>
+      <option value="Nainital Bank">Nainital Bank</option>
+      <option value="Himachal Pradesh State Co-operative Bank">Himachal Pradesh State Co-operative Bank</option>
+      <option value="Bharatiya Mahila Bank">Bharatiya Mahila Bank</option>
+      <option value="J&K Grameen Bank">J&K Grameen Bank</option>
+      <option value="Karnataka Vikas Grameen Bank">Karnataka Vikas Grameen Bank</option>
+      <option value="Madhyanchal Gramin Bank">Madhyanchal Gramin Bank</option>
+      <option value="Odisha Gramya Bank">Odisha Gramya Bank</option>
+      <option value="Uttarakhand Gramin Bank">Uttarakhand Gramin Bank</option>
+      <option value="Bihar Gramin Bank">Bihar Gramin Bank</option>
+      <option value="Chhattisgarh Rajya Gramin Bank">Chhattisgarh Rajya Gramin Bank</option>
+      <option value="Andhra Pradesh Grameena Vikas Bank">Andhra Pradesh Grameena Vikas Bank</option>
+      <option value="Madhya Pradesh Gramin Bank">Madhya Pradesh Gramin Bank</option>
+      <option value="Nagaland Rural Bank">Nagaland Rural Bank</option>
+      <option value="Tripura Gramin Bank">Tripura Gramin Bank</option>
+      <option value="Tamil Nadu State Apex Co-operative Bank">Tamil Nadu State Apex Co-operative Bank</option>
+      <option value="The West Bengal State Co-operative Bank">The West Bengal State Co-operative Bank</option>
+      <option value="Meghalaya Co-operative Apex Bank">Meghalaya Co-operative Apex Bank</option>
+      <option value="Manipur State Co-operative Bank">Manipur State Co-operative Bank</option>
+      <option value="Mizoram State Co-operative Bank">Mizoram State Co-operative Bank</option>
+      <option value="Nagaland State Co-operative Bank">Nagaland State Co-operative Bank</option>
+      <option value="Rajasthan State Co-operative Bank">Rajasthan State Co-operative Bank</option>
+      <option value="Sikkim State Co-operative Bank">Sikkim State Co-operative Bank</option>
+      <!-- Add your options here -->
+    </select><br><br>
+
+    <label for="upi">UPI ID:</label>
+    <input type="text" id="upi" name="upi" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Your Company. All rights reserved.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

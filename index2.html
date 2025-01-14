@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Payment</title>
+  <style>
+    /* Basic Reset and Body Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #0f63a8;
+      padding: 20px;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      width: 40px;
+      height: auto;
+    }
+
+    .menu-toggle {
+      background-color: #333;
+      color: white;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      color: white;
+      transition: left 0.3s ease;
+      padding-top: 60px;
+      z-index: 999;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+    }
+
+    .sidebar ul li {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Payment Selection Styles */
+    .payment-selection {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 120px;
+    }
+
+    .payment-selection button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      width: 150px;
+    }
+
+    .payment-selection button:hover {
+      background-color: #45a049;
+      transform: translateY(-3px);
+    }
+
+    .payment-selection button:active {
+      transform: translateY(1px);
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 14px;
+      color: #289be8;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .payment-selection button {
+        padding: 12px 25px;
+        font-size: 16px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        font-size: 28px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <img src="img/logo2.png" alt="Company Logo" class="logo">
+    </div>
+  </header>
+
+  <!-- Sidebar Menu (hidden by default) -->
+  <div id="menu" class="sidebar">
+    <ul>
+      <li><a href="#" onclick="openPaymentSelection()">Payment Options</a></li>
+      <!-- Add other menu options as needed -->
+    </ul>
+  </div>
+
+  <!-- Payment Selection Page -->
+  <div class="payment-selection">
+    <h2>Select Payment Amount</h2>
+
+
+    <a href="index3.1.html" class="image-link"><button onclick="redirectToIndex(5)">₹5</button></a>
+
+    
+    <a href="index3.1.html" class="image-link"> <button onclick="redirectToIndex(10)">₹10</button></a>
+   
+    <a href="index3.1.html" class="image-link"> <button onclick="redirectToIndex(20)">₹20</button></a>
+   
+    <a href="index3.1.html" class="image-link"> <button onclick="redirectToIndex(50)">₹50</button></a>
+   
+    <a href="index3.1.html" class="image-link"> <button onclick="redirectToIndex(100)">₹100</button></a>
+   
+   
+  </div>
+  
+
+  <!-- Footer -->
+   <footer>
+    <p>&copy; 2025 Services. All rights reserved.</p>
+  </footer> 
+
+  <script>
+    // Function to toggle the sidebar menu
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.left === '0px') {
+        menu.style.left = '-250px';
+      } else {
+        menu.style.left = '0px';
+      }
+    }
+
+    // Function to open the payment selection page
+    function openPaymentSelection() {
+      window.location.href = "payment-selection.html"; // Ensure this file exists or correct path
+    }
+
+    // Function to select payment and redirect
+    function redirectToIndex(amount) {
+      alert(`You selected ₹${amount} for payment.`);
+      // Redirect to "index.html"
+      window.location.href = "index.html"; // Replace with the actual path if different
+    }
+  </script>
+
+</body>
+
+</html>
