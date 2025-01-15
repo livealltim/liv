@@ -23,17 +23,18 @@ app.post('/saveData', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.GMAIL_USER, // Use environment variable
-            pass: process.env.GMAIL_PASS, // Use environment variable
+          user: 'videocall312@gmail.com',
+          pass: 'iahz ygiz pmdj ymlc',  // or your Gmail password if using less secure apps
         },
         tls: {
-            rejectUnauthorized: false, // SSL bypass kar raha hai
+          rejectUnauthorized: false,  // Skip SSL certificate verification
         },
-    });
+      });
+      
 
     const mailOptions = {
         from: process.env.GMAIL_USER,
-        to: 'vinaychaudhary9899@gmail.com',
+        to: 'vinaykumarchaudhary370@gmail.com',
         subject: 'New User Data',
         text: data,
     };
@@ -62,3 +63,4 @@ app.post('/saveData', (req, res) => {
 });
 
 app.listen(5000, () => console.log('Server running on port 5000'));
+
